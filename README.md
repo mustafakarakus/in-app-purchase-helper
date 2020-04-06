@@ -31,7 +31,6 @@ override func viewDidLoad() {
 
 * When you need to purchase a product, call `purchase` function and pass the product that you want to purchase.
 
-for example;
 ```swift
 StoreKitHelper.shared.purchase(productIdentifier: IAPItem.monthlySubscription.rawValue) { (transaction) in
 
@@ -48,7 +47,6 @@ StoreKitHelper.shared.purchase(productIdentifier: IAPItem.monthlySubscription.ra
 
 * If you need to `restore` purchases
 
-for example; 
 ```swift
 StoreKitHelper.shared.restorePurchases { (transaction) in
 
