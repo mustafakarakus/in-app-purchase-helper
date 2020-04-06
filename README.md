@@ -8,7 +8,7 @@ App Store In-App-Purchase Helper
 * Create a String Enum in your project, based on your In-App-Purchase Product Ids in the App Store
 
 for example;
-```
+```swift
 enum IAPItem: String{
     case
     monthlySubscription = "com.example.product1.monthly",
@@ -19,7 +19,7 @@ enum IAPItem: String{
 
 * in viewDidLoad, get your products -Do not pass this step-
 
-```
+```swift
 override func viewDidLoad() {
     super.viewDidLoad()
     let productIds:Set = [IAPItem.monthlySubscription.rawValue,
@@ -32,7 +32,7 @@ override func viewDidLoad() {
 * When you need to purchase a product, call `purchase` function and pass the product that you want to purchase.
 
 for example;
-```
+```swift
 StoreKitHelper.shared.purchase(productIdentifier: IAPItem.monthlySubscription.rawValue) { (transaction) in
 
     switch transaction.transactionState{
@@ -49,7 +49,7 @@ StoreKitHelper.shared.purchase(productIdentifier: IAPItem.monthlySubscription.ra
 * If you need to `restore` purchases
 
 for example; 
-```
+```swift
 StoreKitHelper.shared.restorePurchases { (transaction) in
 
     switch transaction.transactionState{
